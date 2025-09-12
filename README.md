@@ -62,6 +62,7 @@ New minor versions may add additional features to the API.
     - [Statistics](#statistics)
     - [Read-Only Mode](#read-only-mode)
     - [Mobile Use (iOS/Android)](#mobile-use-iosandroid)
+  - [Technical Architecture](#technical-architecture)
   - [Resources](#resources)
   - [Comparison with other databases](#comparison-with-other-databases)
     - [Postgres, MySQL, & other relational databases](#postgres-mysql--other-relational-databases)
@@ -769,6 +770,28 @@ Boltmobiledemo.BoltDB boltDB = Boltmobiledemo.NewBoltDB(path)
 }
 
 ```
+
+## Technical Architecture
+
+For developers who want to understand bbolt's internal architecture, design decisions, and implementation details, comprehensive technical documentation is available:
+
+**[📖 Technical Architecture Documentation](docs/)**
+
+The architecture documentation includes:
+
+- **[System Architecture](docs/architecture.md)** - High-level system overview with component relationships and data flow diagrams
+- **[Core Components](docs/components.md)** - Detailed documentation of DB, Transaction, Bucket, Cursor, Node, and Page components
+- **[Transaction Management](docs/transactions.md)** - MVCC implementation, isolation levels, and concurrency control
+- **[Storage Engine](docs/storage.md)** - B+tree structure, page management, and disk layout details
+- **[Memory Management](docs/memory.md)** - Memory-mapped I/O, caching strategies, and optimization techniques
+- **[API Operations](docs/api-flows.md)** - Detailed flow diagrams for database operations
+
+Each document includes both conceptual explanations and Mermaid diagrams that visualize the internal workings of bbolt. This documentation is especially valuable for:
+
+- Contributors to the bbolt project
+- Developers who need deep integration knowledge
+- Database enthusiasts studying embedded database implementation
+- Anyone interested in B+tree and MVCC implementation patterns
 
 ## Resources
 
